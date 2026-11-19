@@ -74,7 +74,9 @@ export default function Services() {
                 {s.n}
               </span>
               <div>
-                <h3 className="font-display text-2xl font-extrabold leading-tight">{s.title}</h3>
+                <h3 className="font-display text-2xl font-extrabold leading-tight">
+                  <Link href={SERVICE_PATHS[s.id]} className="hover:text-brand">{s.title}</Link>
+                </h3>
                 <p className="mt-3 text-base leading-relaxed">{s.lead}</p>
                 <a
                   href={whatsappForService(s.id)}
