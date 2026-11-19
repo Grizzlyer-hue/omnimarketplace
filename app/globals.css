@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  @apply bg-white font-sans text-body antialiased;
+}
+
+h1, h2, h3, h4 {
+  @apply font-display text-ink;
+  letter-spacing: -0.02em;
+}
+
+@layer components {
+  .btn-gold {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg bg-gold px-5 py-3 text-[15px] font-semibold text-[#111827] transition hover:brightness-95 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white;
+  }
+  .btn-wa {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg bg-wa px-5 py-3 text-[15px] font-semibold text-white transition hover:brightness-95;
+  }
+  .eyebrow {
+    @apply font-display text-[13px] font-bold uppercase tracking-[0.14em] text-brand;
+  }
+  .container-x {
+    @apply mx-auto w-full max-w-6xl px-5 sm:px-8;
+  }
+}
+
+/* FAQ nativo sem JS */
+details > summary { list-style: none; }
+details > summary::-webkit-details-marker { display: none; }
+details[open] .faq-icon { transform: rotate(45deg); }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; animation: none !important; }
+}

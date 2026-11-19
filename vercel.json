@@ -1,0 +1,10 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "www.omnimarketplace.net" }],
+      "destination": "https://omnimarketplace.net/$1",
+      "statusCode": 301
+    }
+  ]
+}
