@@ -1,6 +1,7 @@
-import { ArrowUpRight, Check } from "lucide-react";
+import Link from "next/link";
+import { ArrowRight, ArrowUpRight, Check } from "lucide-react";
 import { whatsappForService } from "@/lib/whatsapp";
-import type { ServiceId } from "@/lib/site";
+import { SERVICE_PATHS, type ServiceId } from "@/lib/site";
 
 const services: {
   id: ServiceId;
@@ -84,6 +85,13 @@ export default function Services() {
                   {s.cta}
                   <ArrowUpRight size={16} className="transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" aria-hidden="true" />
                 </a>
+                <Link
+                  href={SERVICE_PATHS[s.id]}
+                  className="mt-4 flex items-center gap-1.5 text-[15px] font-semibold text-ink hover:text-brand"
+                >
+                  Ver detalhes do serviço
+                  <ArrowRight size={16} aria-hidden="true" />
+                </Link>
               </div>
               <ul className="space-y-3 rounded-xl bg-white p-6 ring-1 ring-slate-200">
                 {s.items.map((t) => (

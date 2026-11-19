@@ -1,4 +1,5 @@
-import { SITE } from "@/lib/site";
+import Link from "next/link";
+import { SERVICES, SERVICE_PATHS, SITE, type ServiceId } from "@/lib/site";
 import { WA_GENERIC } from "@/lib/whatsapp";
 
 export default function Footer() {
@@ -10,6 +11,15 @@ export default function Footer() {
             {SITE.name} <span className="text-xs font-semibold uppercase tracking-[0.16em] text-white/60">Webservices</span>
           </p>
           <p className="mt-1">{SITE.domain}</p>
+          <ul className="mt-4 space-y-1.5">
+            {(Object.keys(SERVICE_PATHS) as ServiceId[]).map((id) => (
+              <li key={id}>
+                <Link href={SERVICE_PATHS[id]} className="hover:text-white hover:underline">
+                  {SERVICES[id].label}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
         <div className="sm:text-right">
           <a href={WA_GENERIC} target="_blank" rel="noopener noreferrer" className="font-semibold text-white hover:underline">

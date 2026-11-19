@@ -35,3 +35,9 @@ export const SERVICES: Record<
       "Olá! Tenho interesse no serviço de Domínio e Hospedagem da Omnimarketplace.",
   },
 };
+
+export const SERVICE_PATHS: Record<ServiceId, string> = {
+  gmn: "/google-meu-negocio",
+  landing: "/criacao-de-landing-page",
+  dominio: "/registro-de-dominio-e-hospedagem",
+};

@@ -14,7 +14,7 @@ export default function Hero() {
             Google Meu Negócio · Landing Pages · Domínio e Hospedagem
           </p>
           <h1 className="font-display text-[2.35rem] font-extrabold leading-[1.06] !text-white sm:text-5xl lg:text-[3.5rem]">
-            Quando o cliente buscar no Google, sua empresa aparece primeiro.
+            Google Meu Negócio e site rápido para a sua empresa aparecer primeiro no Google.
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/85">
             Configuramos seu perfil no Google Maps para ranquear na sua região e

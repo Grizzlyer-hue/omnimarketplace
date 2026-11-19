@@ -23,14 +23,13 @@ const inter = localFont({
   display: "swap",
 });
 
-const title =
-  "Google Meu Negócio, Landing Pages e Hospedagem | Omnimarketplace";
+const title = "Google Meu Negócio e SEO Local | Omnimarketplace";
 const description =
-  "Coloque sua empresa no topo do Google Maps e tenha um site rápido, com domínio e SSL. Google Meu Negócio & SEO Local, Landing Pages e hospedagem. Diagnóstico gratuito.";
+  "Perfil no Google Meu Negócio verificado e otimizado, SEO local, landing pages de alta conversão e domínio com SSL. Diagnóstico gratuito pelo WhatsApp.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
-  title,
+  title: { default: title, template: `%s | ${SITE.name}` },
   description,
   keywords: [
     "Google Meu Negócio",

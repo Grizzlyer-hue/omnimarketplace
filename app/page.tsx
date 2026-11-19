@@ -8,6 +8,8 @@ import Faq from "@/components/Faq";
 import FinalCta from "@/components/FinalCta";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
+import JsonLd from "@/components/JsonLd";
+import { HOME_FAQS, faqSchema } from "@/lib/faq";
 
 export default function Page() {
   return (
@@ -19,11 +21,12 @@ export default function Page() {
         <Services />
         <Process />
         <Projects />
-        <Faq />
+        <Faq items={HOME_FAQS} />
         <FinalCta />
       </main>
       <Footer />
       <WhatsAppFloat />
+      <JsonLd data={faqSchema(HOME_FAQS)} />
     </>
   );
 }
